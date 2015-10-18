@@ -1,14 +1,14 @@
 # Create Slides with Markdown
 
-## Overview
+## reveal-ck is..
 
-reveal-ck is a command line tool that helps you author
-[reveal.js][reveal.js] presentations.
+a command line tool that helps you author [reveal.js][reveal.js]
+presentations.
+
 [reveal.js]: http://lab.hakim.se/reveal-js
 
 It lets you focus on the content of your presentation by taking care
-of the details (HTML, JavaScript) behind building a reveal.js
-presentation.
+of the details of building a reveal.js presentation.
 
 You write your presentation in markdown, in a single file, and
 reveal-ck generates everything else.
@@ -28,7 +28,7 @@ reveal-ck is like.
 
 [quick-example]: docs/QUICK-EXAMPLE.md
 
-## Question?
+## Questions?
 
 Not everything is documented, and nothing is perfect, so-- if you'd
 like to [ask a question or log a bug please do so][new-issue]!
