@@ -13,27 +13,12 @@ of the details of building a reveal.js presentation.
 You write your presentation in markdown, in a single file, and
 reveal-ck generates everything else.
 
-## Installation
-
-`reveal-ck` is delivered as a RubyGem, and so, you need Ruby 2.0+ and
-then installing should be as easy as `gem install reveal-ck`.
-
-Verify that things are functional and you have the latest version of
-reveal-ck by typing `reveal-ck --version`.
-
 ## Basic Usage
 
 Here's a [quick example][quick-example] so you can see what using
 reveal-ck is like.
 
 [quick-example]: docs/QUICK-EXAMPLE.md
-
-## Questions?
-
-Not everything is documented, and nothing is perfect, so-- if you'd
-like to [ask a question or log a bug please do so][new-issue]!
-
-[new-issue]: https://github.com/jedcn/reveal-ck/issues/new
 
 ## Learning More
 
@@ -51,6 +36,21 @@ Here's a long, but not exhaustive, list of things you can do:
 * Easily support CSS tweaks.
 * Use `@mentions`, such as, @jedcn.
 * Manage configuration of themes and plugins in a single config file.
+
+## Installation
+
+`reveal-ck` is delivered as a RubyGem, and so, you need Ruby 2.0+ and
+then installing should be as easy as `gem install reveal-ck`.
+
+Verify that things are functional and you have the latest version of
+reveal-ck by typing `reveal-ck --version`.
+
+## Questions?
+
+Not everything is documented, and nothing is perfect, so-- if you'd
+like to [ask a question or log a bug please do so][new-issue]!
+
+[new-issue]: https://github.com/jedcn/reveal-ck/issues/new
 
 ## Contributing
 
