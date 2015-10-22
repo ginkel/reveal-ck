@@ -36,6 +36,7 @@ Here's a long, but not exhaustive, list of things you can do:
 * Easily support CSS tweaks.
 * Use `@mentions`, such as, @jedcn.
 * Manage configuration of themes and plugins in a single config file.
+* Integrate with `rake` (ie: create rake tasks that build slides)
 
 ## Installation
 
