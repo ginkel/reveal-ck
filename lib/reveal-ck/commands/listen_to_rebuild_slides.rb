@@ -26,7 +26,7 @@ module RevealCK
       end
 
       def ignored_files_regex
-        %r{^slides/.+$}
+        Regexp.union %r{^slides/.+$}, %r{^\.idea/.+$}
       end
 
       def message_and_rebuild(mod, add, del)
