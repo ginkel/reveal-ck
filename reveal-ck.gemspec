@@ -30,8 +30,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'rake', '10.4.2'
   s.add_dependency 'redcarpet', '3.3.2'
   s.add_dependency 'rinku', '1.7.3'
-  s.add_dependency 'slim', '3.0.6'
+  s.add_dependency 'slim', '2.1.0'
   s.add_dependency 'tilt', '2.0.1'
+  s.add_dependency 'asciidoctor', '1.5.3'
 
   #
   # Development Dependencies
