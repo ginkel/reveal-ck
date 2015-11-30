@@ -7,6 +7,7 @@ module RevealCK
     class Generate
       include Retrieve
       attr_reader :slides_file, :stdout_prefix
+
       def initialize(args)
         user_dir = retrieve(:user_dir, args)
         @gem_dir = retrieve(:gem_dir, args)
@@ -25,6 +26,7 @@ module RevealCK
         msg = "#{stdout_prefix} #{msg}" unless stdout_prefix.empty?
         puts msg
         Asciidoctor.convert_file('slides.adoc',
+                                 safe: Asciidoctor::SafeMode::SAFE,
                                  to_file: File.join(@output_dir, 'index.html'),
                                  template_dir: File.join(@gem_dir, 'files/asciidoctor-reveal.js/templates/slim')
         )
