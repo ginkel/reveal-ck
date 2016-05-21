@@ -13,7 +13,7 @@ module RevealCK
 
       def run
         targets = ['.']
-        targets << './content' if File.exist?('./content')
+        targets << './content/' if File.exist?('./content/')
 
         ::Listen.to(*targets, ignore: ignored_files_regex) do |mod, add, del|
           message_and_rebuild(mod, add, del)
