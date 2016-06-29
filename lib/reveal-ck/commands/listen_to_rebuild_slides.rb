@@ -12,8 +12,12 @@ module RevealCK
       end
 
       def run
-        targets = ['.']
-        targets << './content/' if File.exist?('./content/')
+        if File.exist?('./content/')
+          targets = ['.']
+        else
+          targets = %w(./content/ ./images/ ./slides.adoc)
+          targets << './samples/' if File.exist?('./samples/')
+        end
 
         ::Listen.to(*targets, ignore: ignored_files_regex) do |mod, add, del|
           message_and_rebuild(mod, add, del)
