@@ -1,11 +1,8 @@
 require 'simplecov'
 require 'codeclimate-test-reporter'
-SimpleCov.start do
-  formatter SimpleCov::Formatter::MultiFormatter[
-    SimpleCov::Formatter::HTMLFormatter,
-    CodeClimate::TestReporter::Formatter
-  ]
-end
+require 'active_support/core_ext/string/strip'
+
+SimpleCov.start
 
 # silence tilt autoload warnings
 require 'tilt/erb'

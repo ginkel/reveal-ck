@@ -6,17 +6,20 @@ module RevealCK
   module Commands
     # The idea of starting up a webserver to display slides locally.
     class StartWebServer
-      attr_reader :doc_root, :port
-      def initialize(doc_root, port)
+      attr_reader :doc_root, :port, :host
+      def initialize(doc_root, port, host)
         @doc_root = doc_root
         @port = port
+        @host = host
       end
 
       def run
         Rack::Server.new(app: build_rack_app(doc_root),
+                         Host: host,
                          Port: port,
                          DoNotReverseLookup: true,
                          Logger: server_log,
+                         DoNotReverseLookup: true,
                          AccessLog: access_log).start
       end
 

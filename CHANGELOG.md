@@ -13,15 +13,133 @@ bugs are fixed.
 
 ## [Unreleased][unreleased]
 
-[unreleased]: https://github.com/jedcn/reveal-ck/compare/v3.3.1...master
+[unreleased]: https://github.com/jedcn/reveal-ck/compare/v3.8.0...master
 
 ### Added
 
-* Nothing.
+* Nothing
 
 ### Changed
 
+* Nothing
+
+### Fixed
+
 * Nothing.
+
+## 3.8.0 / 2017-06-20
+
+[Detailed Changes](https://github.com/jedcn/reveal-ck/compare/v3.7.0...v3.8.0)
+
+### Added
+
+* Any file ending in *.js in the js/ directory will now be added as a <script>
+  tag.
+* Any file ending in *.js in the plugin/ directory will now be configured to be a reveal.js plugin.
+* Putting these two items together: reveal-ck now supports reveal.js plugins.
+
+### Changed
+
+* Nothing
+
+### Fixed
+
+* Nothing.
+
+## 3.7.0 / 2017-06-10
+
+[Detailed Changes](https://github.com/jedcn/reveal-ck/compare/v3.6.0...v3.7.0)
+
+### Added
+
+* Nothing
+
+### Changed
+
+* The embedded version of reveal.js has been updated to version 3.5.0. See
+  https://github.com/hakimel/reveal.js/releases/tag/3.5.0 for details.
+
+### Fixed
+
+* Nothing.
+
+## 3.6.0 / 2017-04-23
+
+[Detailed Changes](https://github.com/jedcn/reveal-ck/compare/v3.5.1...v3.6.0)
+
+### Added
+
+* By default, the <head prefix="XYZ"/> value now supports
+  http://ogp.me/. This is configurable.
+
+  Additionally, it is now possible to supply <meta>s with properties
+  and names by putting entries into the config.yml.
+
+  Big thanks to @sue445 without which this wouldn't have happened.
+
+  See https://github.com/jedcn/reveal-ck/pull/82 for details.
+
+### Changed
+
+* Nothing
+
+### Fixed
+
+* Nothing.
+
+## 3.5.1 / 2017-01-14
+
+[Detailed Changes](https://github.com/jedcn/reveal-ck/compare/v3.5.0...v3.5.1)
+
+### Added
+
+* Nothing
+
+### Changed
+
+* Upgraded several libraries to more recent versions.
+* Dropped support for older versions of ruby: 2.0.x and 2.1.x.
+
+### Fixed
+
+* Nothing.
+
+## 3.5.0 / 2017-01-07
+
+[Detailed Changes](https://github.com/jedcn/reveal-ck/compare/v3.4.0...v3.5.0)
+
+### Added
+
+* When running `reveal-ck serve`, you can now specify the host you'd
+  like to use. `reveal-ck` still defaults to localhost, but you can
+  supply values like 0.0.0.0. See
+  https://github.com/jedcn/reveal-ck/pull/79 for details.
+
+### Changed
+
+* Nothing
+
+### Fixed
+
+* Nothing.
+
+## 3.4.1 / 2016-12-11
+
+### Added
+
+* You can now use Markdown in slide notes. See
+  https://github.com/jedcn/reveal-ck/issues/68 for details.
+
+* kramdown is the new markdown rendering engine. It replaces
+  redcarpet. The primary rationale is to provide an extension within
+  markdown that supports specifying classes to rendered HTML
+  elements. See https://github.com/jedcn/reveal-ck/issues/71 for
+  details.
+
+### Changed
+
+* WEBrick is now started with the "DoNotReverseLookup" flag. See
+  https://github.com/jedcn/reveal-ck/issues/70 for details.
 
 ### Fixed
 

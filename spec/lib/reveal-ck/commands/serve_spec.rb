@@ -5,6 +5,7 @@ def build_serve
   RevealCK::Commands::Serve
     .new(doc_root: 'doc_root',
          port: 'port',
+         host: 'host',
          user_dir: 'user_dir',
          gem_dir: 'gem_dir',
          output_dir: 'output_dir',
@@ -74,7 +75,7 @@ module RevealCK
           print_banner = double
           expect(PrintBanner)
             .to(receive(:new))
-            .with('doc_root', 'port', 'slides_file', serve_ui)
+            .with('doc_root', 'port', 'host', 'slides_file', serve_ui)
             .and_return(print_banner)
           expect(print_banner)
             .to(receive(:run))
@@ -83,42 +84,6 @@ module RevealCK
           expect_new_and_run(RevealCK::Commands::ListenToReloadBrowser)
           expect_new_and_run(RevealCK::Commands::StartWebServer)
           build_serve.run
-        end
-
-        it 'actually listens for file system changes' do
-          serve_ui = double
-          allow(ServeUI)
-            .to(receive(:new))
-            .and_return(serve_ui)
-          allow(serve_ui)
-            .to(receive(:message))
-
-          Dir.mktmpdir do |dir|
-            Dir.chdir(dir) do
-              print_banner = double
-              allow(PrintBanner)
-                .to(receive(:new))
-                .and_return(print_banner)
-              allow(print_banner)
-                .to(receive(:run))
-
-              # Don't stub out ListenToRebuildSlides
-              allow_new_and_run(RevealCK::Commands::ListenToReloadBrowser)
-              allow_new_and_run(RevealCK::Commands::StartWebServer)
-
-              serve = build_serve
-              serve.run
-              expect(serve)
-                .to(receive(:rebuild_slides))
-              File.open('slides.md', 'w') do |file|
-                file.puts('Slides')
-              end
-              # Creating the file will trigger the call back. But need
-              # to wait else the expecation of :rebuild_slides will
-              # fail-- it's not instantaneous
-              sleep 0.5
-            end
-          end
         end
       end
     end
