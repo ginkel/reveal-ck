@@ -19,7 +19,6 @@ module RevealCK
                          Port: port,
                          DoNotReverseLookup: true,
                          Logger: server_log,
-                         DoNotReverseLookup: true,
                          AccessLog: access_log).start
       end
 
